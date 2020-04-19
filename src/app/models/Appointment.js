@@ -9,6 +9,7 @@ class Appointment extends Model {
       },
       {
         sequelize,
+        underscored: true,
       }
     );
 

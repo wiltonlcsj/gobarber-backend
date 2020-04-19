@@ -1,3 +1,4 @@
 node_modules
 .vscode
-/src/tmp/uploads
+src/tmp/uploads
+yarn.lock
