@@ -4,6 +4,7 @@ import * as Sentry from '@sentry/node';
 import Youch from 'youch';
 import path from 'path';
 import 'express-async-errors';
+import cors from 'cors';
 
 import routes from './routes';
 import './database';
@@ -21,6 +22,7 @@ class App {
 
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
+    this.server.use(cors());
     this.server.use(express.json());
     this.server.use(
       '/files',
